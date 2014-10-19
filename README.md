@@ -13,8 +13,6 @@ Posts wercker build and deploy status to a [Slack](https://slack.com/) channel
 
 * `username` - Bot name. (default `Wercker`)
 * `icon_url` | `icon_emoji` - The icon to use for this bot.
-* `passed-message` - Use this option to override the default passed message.
-* `failed-message` -  Use this option to override the default failed message.
 * `on` - Possible values: `always` and `failed`, default `always`.
 
 
