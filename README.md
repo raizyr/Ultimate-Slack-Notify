@@ -1,5 +1,7 @@
 # Ultimate Slack Notify Step
-Posts wercker build and deploy status to a [Slack](https://slack.com/) channel
+Ultimate notifications for wercker build/deploy status to a [Slack](https://slack.com/) channel
+
+[![wercker status](https://app.wercker.com/status/205507ebb902574b5776f5b34f7fe5ed/m "wercker status")](https://app.wercker.com/project/bykey/205507ebb902574b5776f5b34f7fe5ed)
 
 ## Options
 
