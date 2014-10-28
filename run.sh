@@ -77,5 +77,5 @@ fi
 RESPONSE=`curl -X POST --data-urlencode "$SLACK_JSON" "$SLACK_REQUEST_URL" -w " %{http_code}" -s`
 
 if [ `echo $RESPONSE | awk '{ print $NF }'` != "200" ]; then
-  fatal "$RESPONSE"
+  fail "$RESPONSE"
 fi
