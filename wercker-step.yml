@@ -1,5 +1,5 @@
 name: ultimate-slack-notify
-version: 0.0.6
+version: 0.0.8
 description: Posts wercker build and deploy status to a Slack channel
 keywords:
   - notification
@@ -23,7 +23,7 @@ properties:
   icon_url:
     type: string
     required: false
-    default: "\"icon_url\":\"https://avatars3.githubusercontent.com/u/1695193?s=140\","
+    default: https://avatars3.githubusercontent.com/u/1695193?s=140
   icon_emoji:
     type: string
     required: false
