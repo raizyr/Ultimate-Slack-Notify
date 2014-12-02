@@ -1,19 +1,14 @@
 #!/bin/bash
 
-SLACK_TOKEN=$WERCKER_ULTIMATE_SLACK_NOTIFY_TOKEN
-SLACK_SUBDOMAIN=$WERCKER_ULTIMATE_SLACK_NOTIFY_SUBDOMAIN
+SLACK_WEBHOOK_URL=$WERCKER_ULTIMATE_SLACK_NOTIFY_WEBHOOK_URL
 SLACK_CHANNEL=$WERCKER_ULTIMATE_SLACK_NOTIFY_CHANNEL
 SLACK_USERNAME=$WERCKER_ULTIMATE_SLACK_NOTIFY_USERNAME
 SLACK_ICON_URL=$WERCKER_ULTIMATE_SLACK_NOTIFY_ICON_URL
 SLACK_ICON_EMOJI=$WERCKER_ULTIMATE_SLACK_NOTIFY_EMOJI
 SLACK_NOTIFY_ON=$WERCKER_ULTIMATE_SLACK_NOTIFY_ON
 
-if [ ! -n "$SLACK_TOKEN" ]; then
-  fail 'Please specify token property'
-fi
-
-if [ ! -n "$SLACK_SUBDOMAIN" ]; then
-  fail 'Please specify subdomain property'
+if [ ! -n "$SLACK_WEBHOOK_URL" ]; then
+  fail 'Please specify web hook url property'
 fi
 
 if [[ $SLACK_CHANNEL == \#* ]]; then
@@ -70,8 +65,6 @@ SLACK_JSON="payload={ \
   }] \
 }"
 
-SLACK_REQUEST_URL="https://$SLACK_SUBDOMAIN.slack.com/services/hooks/incoming-webhook?token=$SLACK_TOKEN"
-
 if [ "$SLACK_NOTIFY_ON" = "failed" ]; then
   if [ "$WERCKER_RESULT" = "passed" ]; then
     echo "Skipping.."
@@ -79,7 +72,7 @@ if [ "$SLACK_NOTIFY_ON" = "failed" ]; then
   fi
 fi
 
-RESPONSE=`curl -X POST --data-urlencode "$SLACK_JSON" "$SLACK_REQUEST_URL" -w " %{http_code}" -s`
+RESPONSE=`curl -X POST --data-urlencode "$SLACK_JSON" "$SLACK_WEBHOOK_URL" -w " %{http_code}" -s`
 
 if [ `echo $RESPONSE | awk '{ print $NF }'` != "200" ]; then
   fail "$RESPONSE"

@@ -8,8 +8,7 @@
 
 ### Required
 
-* `token` - Your Slack integration token.
-* `subdomain` - Your Slack subdomain.
+* `webhook_url` - Slack web hook url.
 * `channel` - Name of the Slack channel you want to send message for.
 
 ### Optional
@@ -22,13 +21,12 @@
 Example
 --------
 Add following variables as deploy target or application environment variables:
-`SLACK_TOKEN`, `SLACK_CHANNEL` and `SLACK_SUBDOMAIN`
+`SLACK_WEBHOOK_URL` and `SLACK_CHANNEL`
 
 ```yml
 build:
     after-steps:
         - lotustm/slack-notify:
-            token: $SLACK_TOKEN
+            webhook_url: $SLACK_WEBHOOK_URL
             channel: $SLACK_CHANNEL
-            subdomain: $SLACK_SUBDOMAIN
 ```

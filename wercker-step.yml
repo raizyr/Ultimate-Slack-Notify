@@ -1,15 +1,12 @@
 name: ultimate-slack-notify
-version: 0.1.1
+version: 1.0.0
 description: Posts wercker build and deploy status to a Slack channel
 keywords:
   - notification
   - slack
   - webhook
 properties:
-  token:
-    type: string
-    required: true
-  subdomain:
+  webhook_url:
     type: string
     required: true
   channel:
