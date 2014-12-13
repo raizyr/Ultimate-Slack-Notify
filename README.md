@@ -5,6 +5,7 @@
 > Ultimate notifications for wercker build/deploy status to a [Slack](https://slack.com/) channel
 ![Passed Build](https://raw.githubusercontent.com/LotusTM/Ultimate-Slack-Notify/gh-pages/screens/build--passed.png)
 ![Failed Deploy](https://raw.githubusercontent.com/LotusTM/Ultimate-Slack-Notify/gh-pages/screens/deploy--failed.png)
+
 ## Options
 
 ### Required
