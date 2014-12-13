@@ -3,6 +3,7 @@
 [![Wercker Build Status](http://img.shields.io/wercker/ci/544321f2c69724e30b04dab5.svg?style=flat)](https://app.wercker.com/#applications/544321f2c69724e30b04dab5)
 
 > Ultimate notifications for wercker build/deploy status to a [Slack](https://slack.com/) channel
+
 ![Passed Build](https://raw.githubusercontent.com/LotusTM/Ultimate-Slack-Notify/gh-pages/screens/build--passed.png)
 ![Failed Deploy](https://raw.githubusercontent.com/LotusTM/Ultimate-Slack-Notify/gh-pages/screens/deploy--failed.png)
 
