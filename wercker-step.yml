@@ -1,5 +1,5 @@
 name: ultimate-slack-notify
-version: 1.0.3
+version: 1.0.4
 description: Posts wercker build and deploy status to a Slack channel
 keywords:
   - notification
