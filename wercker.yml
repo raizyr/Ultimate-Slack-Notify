@@ -1,4 +1,4 @@
-box: nodesource/wheezy:LTS
+box: nodesource/wheezy
 build:
   steps:
     - validate-wercker-step
