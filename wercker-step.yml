@@ -1,5 +1,5 @@
 name: ultimate-slack-notify
-version: 1.0.5
+version: 1.0.6
 description: Posts wercker build and deploy status to a Slack channel
 keywords:
   - notification
@@ -27,3 +27,11 @@ properties:
   on:
     type: string
     default: always
+  passed_icon_url:
+    type: string
+    required: false
+    default: http://raizyr.github.io/Ultimate-Slack-Notify/icons/passed.jpg
+  failed_icon_url:
+    type: string
+    required: false
+    default: http://raizyr.github.io/Ultimate-Slack-Notify/icons/failed.jpg
